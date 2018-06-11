@@ -1,0 +1,8 @@
+{
+  "name": "fadigometro",
+  "app_id": "3ab647c9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

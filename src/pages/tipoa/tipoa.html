@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BLE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="searchDevices()">Procurar</button>
+  <ion-list *ngIf="lista.length">
+    <ion-item *ngFor="let item of lista" (click)="connect(item.id)">
+      <ion-avatar item-start>
+        {{item.id}}
+      </ion-avatar>
+      <h2>{{item.name}}</h2>
+      <h3>{{item.id}}</h3>
+      <p>{{item.address}}</p>
+    </ion-item>
+  </ion-list>
+  <pre>
+    <code>
+      {{texto}}
+    </code>
+  </pre>
+</ion-content>
